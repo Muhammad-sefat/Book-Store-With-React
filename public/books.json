@@ -1,0 +1,40 @@
+{
+  "books": [
+    {
+      "image": "https://example.com/book1.jpg",
+      "name": "The Great Gatsby",
+      "price": "$12.99",
+      "title": "The Great Gatsby"
+    },
+    {
+      "image": "https://example.com/book2.jpg",
+      "name": "To Kill a Mockingbird",
+      "price": "$10.95",
+      "title": "To Kill a Mockingbird"
+    },
+    {
+      "image": "https://example.com/book3.jpg",
+      "name": "1984",
+      "price": "$9.99",
+      "title": "1984"
+    },
+    {
+      "image": "https://example.com/book4.jpg",
+      "name": "The Catcher in the Rye",
+      "price": "$11.75",
+      "title": "The Catcher in the Rye"
+    },
+    {
+      "image": "https://example.com/book5.jpg",
+      "name": "Pride and Prejudice",
+      "price": "$8.50",
+      "title": "Pride and Prejudice"
+    },
+    {
+      "image": "https://example.com/book6.jpg",
+      "name": "The Hobbit",
+      "price": "$14.25",
+      "title": "The Hobbit"
+    }
+  ]
+}
