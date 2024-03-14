@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function App() {
   const [books, setbooks] = useState([]);
+  const [cartItem, setCartItem] = useState([]);
   useEffect(() => {
     fetch("books.json")
       .then((res) => res.json())
@@ -11,7 +12,7 @@ function App() {
   }, []);
 
   const handleAddToCart = (book) => {
-    console.log(book);
+    setCartItem([...cartItem, book]);
   };
   return (
     <>
@@ -61,10 +62,18 @@ function App() {
               <h2 className="text-xl font-semibold">Name</h2>
               <h2 className="text-xl font-semibold">Price</h2>
             </div>
-            <div className="flex justify-between items-center bg-white my-3 p-3 rounded-md">
-              <h2 className="text-xl font-semibold">Name</h2>
-              <h2 className="text-xl font-semibold">Price</h2>
-            </div>
+
+            {cartItem.map((cart, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className="flex justify-between items-center bg-white my-3 p-3 rounded-md"
+                >
+                  <h2 className="text-xl font-semibold">{cart.name}</h2>
+                  <h2 className="text-xl font-semibold">{cart.price}</h2>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
