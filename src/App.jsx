@@ -12,7 +12,11 @@ function App() {
   }, []);
 
   const handleAddToCart = (book) => {
-    setCartItem([...cartItem, book]);
+    const isExist = cartItem.find((bok) => bok.title == book.title);
+    console.log(isExist);
+    if (!isExist) {
+      setCartItem([...cartItem, book]);
+    }
   };
   return (
     <>
